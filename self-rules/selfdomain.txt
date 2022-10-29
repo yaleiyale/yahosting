@@ -1,0 +1,17 @@
+payload:
+  - "+.lestua.ml"
+  - "+.lestua.cn.eu.org"
+  - "+.lestua.gq"
+  - "+.ncmapi.gq"
+  - "+.oddisk.gq"
+  - "+.search.bus-hit.me"
+  - "+.search.rhscz.eu"
+  - "+.priv.au"
+  - "+.sh0.it"
+  - "+.opnxng.com"
+  - "+.search.freenetchads.com"
+  - "+.darmarit.org"
+  - "+.s.frlt.one"
+  - "+.lestua-my.sharepoint" 
+  - "+.mail.163.com" 
+ 

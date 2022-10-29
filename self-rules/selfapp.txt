@@ -2,4 +2,6 @@ payload:
   - PROCESS-NAME,steam.exe
   - PROCESS-NAME,EpicGamesLauncher.exe
   - PROCESS-NAME,upc.exe
+  - PROCESS-NAME,UplayWebCore.exe
   - PROCESS-NAME,SocialClubHelper.exe
+

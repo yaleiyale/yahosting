@@ -1,6 +1,7 @@
 payload:
   - "+.lestua.ml"
   - "+.lestua.cn.eu.org"
+  - "+.lestuaqq.gq" 
   - "+.lestua.gq"
   - "+.ncmapi.gq"
   - "+.oddisk.gq"

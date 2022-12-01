@@ -5,6 +5,7 @@ payload:
   - "+.oddisk.cn.eu.org"
   - "+.ncmapi.gq"
   - "+.objekyll.tk"
+  - "+.searx.org"
   - "+.search.bus-hit.me"
   - "+.search.rhscz.eu"
   - "+.priv.au"

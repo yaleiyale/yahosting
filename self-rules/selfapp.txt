@@ -4,4 +4,4 @@ payload:
   - PROCESS-NAME,upc.exe
   - PROCESS-NAME,UplayWebCore.exe
   - PROCESS-NAME,SocialClubHelper.exe
-
+  - PROCESS-NAME,Spotify.exe

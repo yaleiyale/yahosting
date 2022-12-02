@@ -68,7 +68,7 @@ module.exports.parse = (raw, { yaml }) => {
     "RULE-SET,proxy,PROXY",
     "MATCH,🐟漏网之鱼"
   ]
-  const providers = {
+  const ruleProviders = {
     "reject": {
       "type": "http",
       "behavior": "domain",
@@ -182,5 +182,6 @@ module.exports.parse = (raw, { yaml }) => {
       "interval": 86400
     }
   }
-  return yaml.stringify({ ...rawObj, 'proxy-groups': groups, 'rules': rules, 'rule-providers': providers })
+  const proxyProviders = []
+  return yaml.stringify({ ...rawObj, 'proxy-groups': groups, 'rules': rules, 'proxy-providers': proxyProviders, 'rule-providers': ruleProviders })
 }

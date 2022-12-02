@@ -1,56 +1,54 @@
-module.exports.parse = (raw) => {
-  const yaml = {
-    "prepend-proxy-groups": [
-      {
-        "name": "🐟漏网之鱼",
-        "type": "select",
-        "proxies": [
-          "DIRECT",
-          "PROXY"
-        ]
-      },
-      {
-        "name": "🚀不时之需",
-        "type": "select",
-        "proxies": [
-          "DIRECT",
-          "PROXY"
-        ]
-      },
-      {
-        "name": "PROXY",
-        "type": "select",
-        "proxies": [
-          "🤖自动节点",
-          "🎯手动节点"
-        ]
-      },
-      {
-        "name": "🤖自动节点",
-        "type": "url-test",
-        "url": "http://www.gstatic.com/generate_204",
-        "interval": 300,
-        "olerance": 50
-      },
-      {
-        "name": "🎯手动节点",
-        "type": "select"
-      },
-      {
-        "name": "⛔广告拦截",
-        "type": "select",
-        "proxies": [
-          "REJECT",
-          "DIRECT",
-          "PROXY"
-        ]
-      }
-    ],
-    "commands": [
-      "proxy-groups.🤖自动节点.proxies=[]proxyNames",
-      "proxy-groups.🎯手动节点.proxies=[]proxyNames"
-    ],
-    "prepend-rules": [
+module.exports.parse = (raw, { yaml }) => {
+
+  const rawObj = yaml.parse(raw)
+  const groups = [
+    {
+      "name": "🐟漏网之鱼",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "PROXY"
+      ]
+    },
+    {
+      "name": "🚀不时之需",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "PROXY"
+      ]
+    },
+    {
+      "name": "PROXY",
+      "type": "select",
+      "proxies": [
+        "🤖自动节点",
+        "🎯手动节点"
+      ]
+    },
+    {
+      "name": "🤖自动节点",
+      "type": "url-test",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "olerance": 50
+    },
+    {
+      "name": "🎯手动节点",
+      "type": "select"
+    },
+    {
+      "name": "⛔广告拦截",
+      "type": "select",
+      "proxies": [
+        "REJECT",
+        "DIRECT",
+        "PROXY"
+      ]
+    }
+  ]
+  const rules = {
+    "rules": [
       "RULE-SET,reject,⛔广告拦截",
       "RULE-SET,direct,DIRECT",
       "RULE-SET,cncidr,DIRECT",
@@ -70,8 +68,10 @@ module.exports.parse = (raw) => {
       "RULE-SET,telegramcidr,PROXY",
       "RULE-SET,proxy,PROXY",
       "MATCH,🐟漏网之鱼"
-    ],
-    "mix-rule-providers": {
+    ]
+  }
+  const providers = {
+    "rule-providers": {
       "reject": {
         "type": "http",
         "behavior": "domain",
@@ -186,8 +186,5 @@ module.exports.parse = (raw) => {
       }
     }
   }
-  const rawObj = yaml.parse(raw)
-  const groups = []
-  const rules = []
-  return yaml.stringify({ ...rawObj, 'proxy-groups': groups, rules })
+  return yaml.stringify({ ...rawObj, 'proxy-groups': groups, rules, providers })
 }

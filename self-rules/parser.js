@@ -182,6 +182,6 @@ module.exports.parse = (raw, { yaml }) => {
       "interval": 86400
     }
   }
-  const proxyProviders = []
+  const proxyProviders = {}
   return yaml.stringify({ ...rawObj, 'proxy-groups': groups, 'rules': rules, 'proxy-providers': proxyProviders, 'rule-providers': ruleProviders })
 }

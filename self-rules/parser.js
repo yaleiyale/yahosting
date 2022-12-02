@@ -1,6 +1,11 @@
 module.exports.parse = (raw, { yaml }) => {
 
   const rawObj = yaml.parse(raw)
+  let allNode = [];
+  for (i in rawObj) {
+    allNode.push(i.proxies.name)
+  }
+
   const groups = [
     {
       "name": "🐟漏网之鱼",
@@ -31,11 +36,13 @@ module.exports.parse = (raw, { yaml }) => {
       "type": "url-test",
       "url": "http://www.gstatic.com/generate_204",
       "interval": 300,
-      "olerance": 50
+      "olerance": 50,
+      "proxies": allNode
     },
     {
       "name": "🎯手动节点",
-      "type": "select"
+      "type": "select",
+      "proxies": allNode
     },
     {
       "name": "⛔广告拦截",

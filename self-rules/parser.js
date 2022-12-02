@@ -1,11 +1,9 @@
 module.exports.parse = (raw, { yaml }) => {
-
   const rawObj = yaml.parse(raw)
-  let allNode = [];
-  for (i in rawObj.proxies) {
-    allNode.push(i.name)
+  var allNode = [];
+  for (var i in rawObj.proxies) {
+    allNode.push(rawObj.proxies[i].name)
   }
-
   const groups = [
     {
       "name": "🐟漏网之鱼",

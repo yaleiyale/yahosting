@@ -2,8 +2,8 @@ module.exports.parse = (raw, { yaml }) => {
 
   const rawObj = yaml.parse(raw)
   let allNode = [];
-  for (i in rawObj) {
-    allNode.push(i.proxies.name)
+  for (i in rawObj.proxies) {
+    allNode.push(i.name)
   }
 
   const groups = [

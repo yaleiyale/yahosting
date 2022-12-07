@@ -6,6 +6,8 @@ payload:
   - "+.ncmapi.gq"
   - "+.objekyll.tk"
   - "+.searx.org"
+  - "+.searx.sev.monster"
+  - "+.s.zhaocloud.net"
   - "+.search.bus-hit.me"
   - "+.search.rhscz.eu"
   - "+.priv.au"

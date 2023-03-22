@@ -1,4 +1,5 @@
 payload:
+  - "+.github.com"
   - "+.lestua.ml"
   - "+.lestua.eu.org"
   - "+.lestua.cn.eu.org"

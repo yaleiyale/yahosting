@@ -1,0 +1,5 @@
+parsers:
+  - reg: ^.*$
+    remote:
+      url: https://cdn.jsdelivr.net/gh/yaleiyale/yahosting@main/self-rules/parser.js
+      cache: true # 默认为false，指示是否对重复下载此预处理代码使用缓存

@@ -1,12 +1,4 @@
 payload:
-  - "+.githubusercontent.com"
-  - "+.github.com"
-  - "+.lestua.ml"
-  - "+.lestua.eu.org"
-  - "+.lestua.cn.eu.org"
-  - "+.oddisk.cn.eu.org"
-  - "+.ncmapi.gq"
-  - "+.objekyll.tk"
   - "+.searx.org"
   - "+.searx.sev.monster"
   - "+.s.zhaocloud.net"
